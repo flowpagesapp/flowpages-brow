@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "config"
+    label: "Configurações do Site"
+    files:
+      - name: "geral"
+        label: "Informações Gerais"
+        file: "site-data.yml"
+        fields:
+          - { label: "Nome do Estúdio", name: "nome", widget: "string" }
+          - { label: "Biografia (Sobre)", name: "bio", widget: "text" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "Telefone", name: "telefone", widget: "string" }
+          - { label: "E-mail", name: "email", widget: "string" }
+          - { label: "Endereço", name: "endereco", widget: "string" }
+          - { label: "Foto de Perfil (Logo)", name: "foto_perfil", widget: "image" }
+          - { label: "Imagem Hero (Principal)", name: "hero_imagem", widget: "image" }
+          - { label: "Imagem da Seção Sobre", name: "sobre_imagem", widget: "image" }
+          - { label: "Galeria de Trabalhos", name: "galeria", widget: "list", 
+              fields: [{ label: "Imagem", name: "imagem", widget: "image" }] }
+          - { label: "Depoimentos", name: "depoimentos", widget: "list",
+              fields: [
+                { label: "Nome", name: "nome", widget: "string" },
+                { label: "Texto", name: "texto", widget: "text" },
+                { label: "Foto", name: "foto", widget: "image" }
+              ] }
